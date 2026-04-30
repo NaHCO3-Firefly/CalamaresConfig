@@ -1,0 +1,59 @@
+- name: "Chat Clients"
+  description: "聊天客户端, 不同版本的客户端不可同时安装"
+  selected: false
+  expanded: true
+  packages:
+    - linuxqq
+    - linuxqq-appimage
+    - linuxqq-nt-bwrap
+    - wechat-bin
+    - wechat-appimage
+    - wechat-universal-bwrap
+    - wemeet-bin
+- name: "Productivity"
+  description: "生产力工具"
+  selected: false
+  expanded: true
+  subgroups:
+    - name: "WPS Office"
+      description: "WPS Office"
+      selected: false
+      expanded: false
+      packages:
+        - wps-office-cn
+        - wps-office-mime-cn
+        - wps-office-mui-zh-cn
+        - ttf-wps-fonts
+    - name: "OnlyOffice"
+      description: "OnlyOffice"
+      selected: false
+      expanded: false
+      packages:
+        - onlyoffice-bin
+    - name: "LibreOffice"
+      description: "LibreOffice"
+      selected: false
+      expanded: false
+      packages:
+        - libreoffice-fresh
+        - libreoffice-fresh-zh-cn
+- name: "Development"
+  description: "开发者工具"
+  selected: false
+  expanded: true
+  packages:
+    - visual-studio-code-bin
+    - jetbrains-toolbox
+    - gitkraken
+    - obsidian
+- name: "Browsers"
+  description: "浏览器"
+  selected: false
+  expanded: true
+  packages:
+    - chromium
+    - ungoogled-chromium-bin
+    - google-chrome
+    - microsoft-edge-stable-bin
+    - brave-bin
+

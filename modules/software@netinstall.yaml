@@ -1,0 +1,182 @@
+- name: "Input Method"
+  description: "输入法"
+  hidden: false
+  expanded: true
+  critical: true
+  subgroups:
+      - name: "Fcitx5"
+        description: "Fcitx5 输入法框架"
+        selected: true
+        expanded: false
+        packages:
+          - fcitx5-im
+          - fcitx5-chinese-addons
+          - fcitx5-rime
+          - fcitx5-pinyin-moegirl
+          - fcitx5-pinyin-zhwiki
+          - fcitx5-material-color
+          - kwindowsystem
+      - name: "IBus"
+        description: "IBus 输入法框架(gnome 默认已经集成 IBus)"
+        selected: false
+        expanded: false
+        packages:
+          - ibus
+          - ibus-libpinyin 
+          - ibus-rime
+          - ibus-sunpinyin
+- name: "Shell"
+  description: "选择你喜欢的 Shell, 默认是 Fish Shell"
+  hidden: false
+  expanded: true
+  critical: true
+  subgroups:
+      - name: "Fish Shell"
+        description: "Fish Shell"
+        selected: true
+        packages:
+          - fish
+      - name: "Zsh Shell"
+        description: "Zsh Shell"
+        selected: false
+        packages:
+          - zsh
+          - zsh-completions
+          - zsh-autosuggestions
+          - zsh-syntax-highlighting
+          - zsh-theme-powerlevel10k-git
+- name: "Terminal Emulators"
+  description: "其他终端模拟器"
+  hidden: false
+  selected: false
+  expanded: false
+  critical: true
+  packages:
+    - alacritty
+    - kitty
+    - ghostty
+    - foot
+- name: "Extra Kernels"
+  description: "额外的内核"
+  hidden: false
+  selected: false
+  expanded: true
+  critical: true
+  subgroups:
+      - name: "LTS Kernel"
+        description: "LTS Kernel, ZFS 用户需要选择, 且不应该选择其他内核"
+        selected: false
+        packages:
+          - linux-lts
+          - linux-lts-headers
+      - name: "Mainline Kernel"
+        description: "Mainline Kernel"
+        selected: false
+        packages:
+          - linux
+          - linux-headers
+      - name: "Zen Kernel"
+        description: "Zen Kernel"
+        selected: false
+        packages:
+          - linux-zen
+          - linux-zen-headers
+      - name: "Hardened Kernel"
+        description: "Hardened Kernel"
+        selected: false
+        packages:
+          - linux-hardened
+          - linux-hardened-headers
+- name: "Snapshot"
+  description: "快照工具, 建议Btrfs用户选择, 不需要可以不选"
+  hidden: false
+  selected: false
+  expanded: false
+  critical: true
+  packages:
+    - grub-btrfs
+    - btrfs-assistant
+    - snapper
+- name: "Linux Subsystem"
+  description: "Linux subsystem tools"
+  hidden: false
+  selected: true
+  expanded: false
+  critical: false
+  packages:
+    - distrobox
+    - podman
+- name: "Virtualization Tools"
+  description: "虚拟化工具"
+  hidden: false
+  selected: false
+  expanded: false
+  critical: false
+  subgroups:
+      - name: "QEMU & Virt-Manager"
+        description: "QEMU & Virt-Manager"
+        selected: false
+        packages:
+          - qemu
+          - virt-manager
+          - virt-viewer
+          - libvirt
+          - edk2-ovmf
+          - dnsmasq
+          - bridge-utils
+          - openbsd-netcat
+          - virt-install
+          - libguestfs
+          - ebtables 
+          - iptables
+      - name: "VirtualBox"
+        description: "VirtualBox"
+        selected: false
+        packages:
+          - virtualbox
+          - virtualbox-host-dkms
+          - virtualbox-guest-iso
+- name: "Containers"
+  description: "容器相关工具"
+  hidden: false
+  selected: false
+  expanded: false
+  critical: false
+  subgroups:
+      - name: "Docker"
+        description: "Docker"
+        selected: false
+        packages:
+          - docker
+          - docker-compose
+          - lazydocker
+      - name: "Podman"
+        description: "Podman"
+        selected: false
+        packages:
+          - podman
+          - podman-docker
+          - podman-compose
+- name: "Audio & Video Playback"
+  description: "影音播放"
+  hidden: false
+  selected: true
+  expanded: false
+  critical: true
+  packages:
+    - mpv
+    - vlc
+- name: "Graphics & Design"
+  description: "图形与设计"
+  hidden: false
+  selected: false
+  expanded: false
+  critical: false
+  packages:
+    - gimp
+    - inkscape
+    - krita
+    - blender
+    - darktable
+    - kdenlive
+    - obs-studio

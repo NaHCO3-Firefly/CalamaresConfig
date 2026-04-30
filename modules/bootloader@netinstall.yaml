@@ -1,0 +1,24 @@
+- name: "Bootloader"
+  description: "Choose your bootloader - select exactly one"
+  hidden: false
+  selected: false
+  expanded: true
+  subgroups:
+      - name: "GRUB"
+        description: "GRUB is the oldest of the available boot managers. It has a very large feature set, works on almost every machine, and remains the most widely used Linux boot manager. Choose GRUB if you need encrypted /boot, BIOS compatibility, or want Btrfs snapshots with a stable, mature boot manager."
+        hidden: false
+        selected: true
+        expanded: false
+        critical: true
+        packages:
+          - grub
+          - efibootmgr
+      - name: "systemd-boot"
+        description: "Part of the systemd family, systemd-boot was created to be as simple as possible. This simple yet efficient design ensures it is reliable and fast. Choose systemd-boot if you prefer the simplest setup and don't require snapshots or advanced features. It is also the most reliable fallback for MSI motherboards with UEFI issues."
+        hidden: false
+        selected: false
+        expanded: false
+        critical: true
+        packages:
+          - systemd-boot
+          - efibootmgr
