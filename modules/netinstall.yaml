@@ -480,7 +480,7 @@
   critical: false
   packages:
     - firefox
-    - firefox-i18n-$LOCALE
+    - firefox-i18n-zh-cn
 - name: "Printing-Support"
   description: "Support for printing (Cups)"
   hidden: false

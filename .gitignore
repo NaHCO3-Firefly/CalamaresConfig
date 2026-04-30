@@ -1,5 +1,6 @@
 log
 *.sh
+dont move and rm unless your mother dont love you.sh
 .idea/
 *.pyc
 __pycache__/

@@ -102,7 +102,7 @@ def run_paru(command, num_retries=0):
 
 def install_packages(pkgs, config):
     del_db_lock()
-    command = ["paru", "-S", "--noconfirm", "--noprogressbar"]
+    command = ["paru", "-S", "--noconfirm", "--noprogressbar", "--sudoloop"]
     if config.get("needed_only", False):
         command.append("--needed")
     if config.get("disable_download_timeout", False):
